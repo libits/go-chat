@@ -13,13 +13,15 @@ import (
 func NewRouter() *gin.Engine {
 	gin.SetMode(gin.ReleaseMode)
 
+	//创建默认的路由引擎
 	server := gin.Default()
 	server.Use(Cors())
 	server.Use(Recovery)
 	// server.Use(gin.Recovery())
 
 	socket := RunSocekt
-
+    
+	//配置路由
 	group := server.Group("")
 	{
 		group.GET("/user", v1.GetUserList)
