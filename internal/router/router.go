@@ -22,6 +22,10 @@ func NewRouter() *gin.Engine {
 	socket := RunSocekt
     
 	//配置路由
+	//get:从服务器取出资源
+	//post:在服务器新建一个资源
+	//put:在服务器更新资源
+	//delete:从服务器删除资源
 	group := server.Group("")
 	{
 		group.GET("/user", v1.GetUserList)
@@ -60,6 +64,7 @@ func Cors() gin.HandlerFunc {
 			c.Header("Access-Control-Allow-Credentials", "true")
 		}
 		//允许类型校验
+		//状态码
 		if method == "OPTIONS" {
 			c.JSON(http.StatusOK, "ok!")
 		}
