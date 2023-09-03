@@ -1,7 +1,7 @@
 package router
 
 import (
-	"chat-room/api/v1"
+	v1 "chat-room/api/v1"
 	"chat-room/pkg/common/response"
 	"chat-room/pkg/global/log"
 	"net/http"
@@ -20,7 +20,6 @@ func NewRouter() *gin.Engine {
 	// server.Use(gin.Recovery())
 
 	socket := RunSocekt
-    
 	//配置路由
 	//get:从服务器取出资源
 	//post:在服务器新建一个资源
