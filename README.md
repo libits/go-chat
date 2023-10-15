@@ -45,7 +45,7 @@ go中协程是非常轻量级的。在每个client接入的时候，为每一个
 
 界面选择单页框架可以更加方便写聊天界面，比如像消息提醒，可以在一个界面接受到消息进行提醒，不会因为换页面或者查看其他内容影响消息接受。
 [前端代码仓库](https://github.com/libits/go-chat-web)：
-https://github.com/kone-net/go-chat-web
+https://github.com/libits/go-chat-web
 
 
 ### 前端技术和框架
